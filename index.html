@@ -50,7 +50,7 @@
                 </div>
                 <div id="generator" class="content-box">
                     <h4>Generate</h4>
-                    <button id="generateWords" onClick="OnGenerate()">Generate Pony Words</button>
+                    <button id="generateWords" onClick="OnGenerate()" disabled>Generate Pony Words</button>
                     <button id="clearWords" onClick="OnClear()">Clear Pony Words</button>
                 </div>
             </div>
@@ -70,6 +70,10 @@
 
                 // Build the pair databases
                 ConvertTextToMarkov(scripts);
+
+                // Enable the Generate button
+                var generateButton = document.GetElementById("generateWords");
+                generateButton.disabled = false;
 
                 // Let user know it's loaded
                 var loadStatus = document.GetElementById("loadStatus");
