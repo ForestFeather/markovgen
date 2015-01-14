@@ -27,33 +27,36 @@
 
             <div id="header" class="twelve columns add-bottom">
                 <div class="border-box">
-                    <h2 class="title">All Dem Pony Words</h2>
+                    <h2 class="title">My Little Pony&reg; Response Generator</h2>
                 </div>
             </div>
 
             <div id="nav" class="four columns">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="mailto:collinDERTdDERToconnor___YouKnowWhatSymbolGoesHere___gmailDERTcom">Contact</a></li>
                 </ul>
             </div>
 
             <div id="intro" class="sixteen columns add-bottom">
                 <div class="content-box">
-                    Welcome to the Pony Markov Word Generator!  Simply select the text groups you wish to load; wait until they are loaded, and then click "Generate Pony Words" to begin generating sequences.
+                    Welcome to the Pony Markov Word Generator!  Simply select the text groups you wish to load; wait until they are loaded, and then click "Generate Pony Words" to begin generating sequences.  Keep pressing Generate and see what kinds of words and 'conversations' you can find!
+                </div>
+                <div class="content-box">
+                    This is a fan creation provided as-is, for free, for fans of the My Little Pony show to generate silly, nonsensical responses from their favorite ponies.  I own absolutely nothing about MLP and make no claims to it.
                 </div>
             </div>
 
             <div class="four columns add-bottom">
 
                 <div id="loader" class="content-box border-box">
-                    <h4>Load Content</h4>
+                    <h4 class="subtitle center underline">Load Content</h4>
                     <p id="loadStatus" style="color: red;">Content not loaded.</p>
                     <button id="generateWords" onClick="OnLoad()">Load Pony Words</button>
                 </div>
                 <div id="generator" class="content-box border-box">
-                    <h4>Generate</h4>
+                    <h4 class="subtitle center underline">Generate</h4>
                     <button id="generateWords" onClick="OnGenerate()">Generate Pony Words</button>
                     <button id="clearWords" onClick="OnClear()">Clear Pony Words</button>
                 </div>
