@@ -42,7 +42,7 @@
             </div>
 
             <div class="four columns add-bottom">
-                
+
                 <div id="loader" class="content-box">
                     <h4>Load Content</h4>
                     <p id="loadStatus" style="color: red;">Content not loaded.</p>
@@ -64,31 +64,49 @@
 
         </div><!-- container -->
         <script type="text/javascript">
-            var scripts = LoadScripts();
-            ConvertTextToMarkov(scripts);
+            function OnLoad() {
+                // Load content
+                var scripts = LoadScripts();
 
-            function OnClick() {
+                // Build the pair databases
+                ConvertTextToMarkov(scripts);
 
-                // Get parent element to add to
-                var responseList = document.getElementById("responses");
-
-                // Generate Markov
-                var markov = GenerateMarkovChain();
-
-                //create new li element
-                var newLine = document.createElement("li");
-
-                //create new text node
-                var lineContent = document.createTextNode(markov);
-
-                //add text node to li element
-                newLine.appendChild(lineContent);
-
-                //add new list element built in previous steps to unordered list
-                //called numberList
-                responseList.appendChild(newLine);
+                // Let user know it's loaded
+                var loadStatus = document.GetElementById("loadStatus");
+                loadStatus.innerHTML = "Content Loaded!";
+                loadStatus.style.color = "green";
             }
-        </script>
+
+function OnClear() {
+    // Get the element
+    var responseList = document.getElementById("responses");
+
+    // Clean it out
+    responseList.innerHTML = "";
+}
+
+function OnGenerate() {
+
+    // Get parent element to add to
+    var responseList = document.getElementById("responses");
+
+    // Generate Markov
+    var markov = GenerateMarkovChain();
+
+    //create new li element
+    var newLine = document.createElement("li");
+
+    //create new text node
+    var lineContent = document.createTextNode(markov);
+
+    //add text node to li element
+    newLine.appendChild(lineContent);
+
+    //add new list element built in previous steps to unordered list
+    //called numberList
+    responseList.appendChild(newLine);
+}
+</script>
 
     </body>
 </html>
