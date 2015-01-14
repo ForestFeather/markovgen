@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8" />
+        <title>Pony Text Generator</title>
+        <meta name="description" content="Generates text responses based upon ">
+        <meta name="author" content="Collin 'Ridayah' O'Connor">
+
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+
+        <!-- CSS
+        ================================================== -->
+        <link rel="stylesheet" href="stylesheets/base.css">
+        <link rel="stylesheet" href="stylesheets/skeleton.css">
+        <link rel="stylesheet" href="stylesheets/layout.css">
+
+        <!-- SCRIPTS
+        ================================================= -->
+        <script src="scripts/file_loader.js"></script>
+        <script src="scripts/markov.js"></script>
+    </head>
+    <body>
+        <div class="container"> 
+
+            <div id="logo" class="twelve columns add-bottom">
+                <h2>All Dem Pony Words</h2>
+            </div>
+
+            <div id="nav" class="four columns">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div id="bigphoto" class="sixteen columns add-bottom">
+                <button id="generateWords" onClick="OnClick()">Generate Pony Words</button>
+                <ul id="responses">
+
+                </ul>
+            </div>
+
+        </div><!-- container -->
+        <script type="text/javascript">
+            var scripts = LoadScripts();
+            ConvertTextToMarkov(scripts);
+
+            function OnClick() {
+
+                // Get parent element to add to
+                var responseList = document.getElementById("responses");
+
+                // Generate Markov
+                var markov = GenerateMarkovChain();
+
+                //create new li element
+                var newLine = document.createElement("li");
+
+                //create new text node
+                var lineContent = document.createTextNode(markov);
+
+                //add text node to li element
+                newLine.appendChild(lineContent);
+
+                //add new list element built in previous steps to unordered list
+                //called numberList
+                responseList.appendChild(newLine);
+            }
+        </script>
+
+    </body>
+</html>
