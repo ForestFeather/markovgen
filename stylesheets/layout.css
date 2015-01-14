@@ -36,14 +36,13 @@ body {
 }
 
 #header {
-    background-color: #FAA4FF; 
+    background-color: #ee3399; 
 }
 
 #nav ul li {
     float: left;
     margin-left: 30px;
     line-height: 40px;
-    background-color: #FAA4FF;
 }
 #nav ul {
     background-color: #FAA4FF;
@@ -58,6 +57,7 @@ body {
     font-size: xx-size;
     font-weight: bold;
     margin: 10px;
+    text-align: center;
 }
 
 .content-box {
