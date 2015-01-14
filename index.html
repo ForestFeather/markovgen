@@ -50,7 +50,7 @@
                 </div>
                 <div id="generator" class="content-box">
                     <h4>Generate</h4>
-                    <button id="generateWords" onClick="OnGenerate()" disabled>Generate Pony Words</button>
+                    <button id="generateWords" onClick="OnGenerate()">Generate Pony Words</button>
                     <button id="clearWords" onClick="OnClear()">Clear Pony Words</button>
                 </div>
             </div>
@@ -64,6 +64,13 @@
 
         </div><!-- container -->
         <script type="text/javascript">
+
+            // All onStartup blocks
+            // Holding cache
+            var cache = {
+                '_START': []
+            };
+
             function OnLoad() {
                 // Load content
                 var scripts = LoadScripts();

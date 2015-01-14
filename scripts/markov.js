@@ -1,17 +1,3 @@
-// Returns the source text
-function get() { return document.getElementById('in').value; }
-
-// Clears the source textbox
-function clear() { document.getElementById('in').value = ''; }
-
-// Writes to the output textbox
-function set(v) { document.getElementById('out').value = v; }
-
-// Holds the state information
-var cache = {
-    '_START': []
-};
-
 function ConvertTextToMarkov( inputText ) {
     // Get the source text and split it into words
     var text = inputText.split(/\s+/g);
