@@ -20,22 +20,33 @@
 /* #Page Styles
  * ================================================== */
 
+/* Colors
+ *
+ * Backgrounds: #F7F7F7
+ * pale pink: #FAA4FF
+ * dark pink: #AD4CB2
+ * seafoam green: #CAFFA4
+ * olive green: #78B24F
+ *
+ * */
+
 body {
     padding-top: 40px;
     background-color: #F7F7F7;
 }
 
 #header {
-    background-color: 983586; 
+    background-color: #FAA4FF; 
 }
 
 #nav ul li {
     float: left;
     margin-left: 30px;
     line-height: 40px;
+    background-color: #FAA4FF;
 }
 #nav ul {
-    background-color: #BC5F8E;
+    background-color: #FAA4FF;
 }
 
 #bigphoto img, .smallphoto img { 
@@ -44,7 +55,8 @@ body {
 }
 
 .title {
-    font-size: xx-large;
+    font-size: xx-size;
+    font-weight: bold;
     margin: 10px;
 }
 
