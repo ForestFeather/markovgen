@@ -87,7 +87,19 @@
 
 function OnLoad() {
     // Load content
-    var scripts = LoadScripts();
+    //var scripts = LoadScripts();
+
+    // Load scripts selected
+    var scripts;
+
+    if( document.getElementById("S1").checked ) { scripts += LoadScript("S1"); }
+    if( document.getElementById("S2").checked ) { scripts += LoadScript("S2"); }
+    if( document.getElementById("S3").checked ) { scripts += LoadScript("S3"); }
+    if( document.getElementById("S4").checked ) { scripts += LoadScript("S4"); }
+    if( document.getElementById("EQG").checked ) { scripts += LoadScript("EQG"); }
+
+    // Make sure we have scripts loaded
+    if(scripts == "") return;
 
     // Build the pair databases
     ConvertTextToMarkov(scripts);
