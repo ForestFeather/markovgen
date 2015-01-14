@@ -60,6 +60,12 @@ body {
     margin: 10px;
 }
 
+.content-box {
+    margin: 5px;
+    padding: 10px;
+    background-color: #CAFFA4;
+}
+
 /* #Media Queries
  * ================================================== */
 
