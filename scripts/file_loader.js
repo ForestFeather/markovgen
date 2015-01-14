@@ -6,6 +6,14 @@ function LoadScripts() {
     return contents;
 }
 
+function LoadScript(scriptName) {
+    var path = "text/" + scriptName + ".txt";
+
+    var contents = FileHelper.readStringFromFileAtPath( path );
+
+    return contents;
+}
+
 function FileHelper()
 {}
 {
