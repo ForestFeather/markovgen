@@ -25,7 +25,7 @@
     <body>
         <div class="container"> 
 
-            <div id="header" class="twelve columns add-bottom">
+            <div id="header" class="twelve columns add-bottom border-box">
                 <h2 class="title">All Dem Pony Words</h2>
             </div>
 
@@ -38,17 +38,19 @@
             </div>
 
             <div id="intro" class="sixteen columns add-bottom">
-                Welcome to the Pony Markov Word Generator!  Simply select the text groups you wish to load; wait until they are loaded, and then click "Generate Pony Words" to begin generating sequences.
+                <div class="content-box border-box">
+                    Welcome to the Pony Markov Word Generator!  Simply select the text groups you wish to load; wait until they are loaded, and then click "Generate Pony Words" to begin generating sequences.
+                </div>
             </div>
 
             <div class="four columns add-bottom">
 
-                <div id="loader" class="content-box">
+                <div id="loader" class="content-box border-box">
                     <h4>Load Content</h4>
                     <p id="loadStatus" style="color: red;">Content not loaded.</p>
                     <button id="generateWords" onClick="OnLoad()">Load Pony Words</button>
                 </div>
-                <div id="generator" class="content-box">
+                <div id="generator" class="content-box border-box">
                     <h4>Generate</h4>
                     <button id="generateWords" onClick="OnGenerate()">Generate Pony Words</button>
                     <button id="clearWords" onClick="OnClear()">Clear Pony Words</button>
@@ -67,26 +69,26 @@
 
             // All onStartup blocks
             // Holding cache
-            var cache = {
-                '_START': []
-            };
+        var cache = {
+            '_START': []
+        };
 
-            function OnLoad() {
-                // Load content
-                var scripts = LoadScripts();
+function OnLoad() {
+    // Load content
+    var scripts = LoadScripts();
 
-                // Build the pair databases
-                ConvertTextToMarkov(scripts);
+    // Build the pair databases
+    ConvertTextToMarkov(scripts);
 
-                // Enable the Generate button
-                var generateButton = document.getElementById("generateWords");
-                generateButton.disabled = false;
+    // Enable the Generate button
+    var generateButton = document.getElementById("generateWords");
+    generateButton.disabled = false;
 
-                // Let user know it's loaded
-                var loadStatus = document.getElementById("loadStatus");
-                loadStatus.innerHTML = "Content Loaded!";
-                loadStatus.style.color = "green";
-            }
+    // Let user know it's loaded
+    var loadStatus = document.getElementById("loadStatus");
+    loadStatus.innerHTML = "Content Loaded!";
+    loadStatus.style.color = "green";
+}
 
 function OnClear() {
     // Get the element
