@@ -43,6 +43,10 @@ body {
     height: auto;
 }
 
+.title {
+    font-size: xx-large;
+    margin: 10px;
+}
 
 /* #Media Queries
  * ================================================== */
