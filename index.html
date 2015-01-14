@@ -72,11 +72,11 @@
                 ConvertTextToMarkov(scripts);
 
                 // Enable the Generate button
-                var generateButton = document.GetElementById("generateWords");
+                var generateButton = document.getElementById("generateWords");
                 generateButton.disabled = false;
 
                 // Let user know it's loaded
-                var loadStatus = document.GetElementById("loadStatus");
+                var loadStatus = document.getElementById("loadStatus");
                 loadStatus.innerHTML = "Content Loaded!";
                 loadStatus.style.color = "green";
             }
