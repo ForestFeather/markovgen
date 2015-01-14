@@ -42,7 +42,16 @@
             </div>
 
             <div class="sixteen columns add-bottom">
-                <button id="generateWords" onClick="OnClick()">Generate Pony Words</button>
+                <div id="loader" class="content-box">
+                    <button id="generateWords" onClick="OnLoad()">Load Pony Words</button>
+                </div>
+                <div id="generator" class="content-box">
+                    <button id="generateWords" onClick="OnGenerate()">Generate Pony Words</button>
+                </div>
+            </div>
+            <div class="twelve columns add-bottom">
+                <h3>Generated Responses</h3>
+
                 <ul id="responses">
 
                 </ul>
