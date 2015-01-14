@@ -42,11 +42,16 @@
             </div>
 
             <div class="four columns add-bottom">
+                
                 <div id="loader" class="content-box">
+                    <h4>Load Content</h4>
+                    <p id="loadStatus" style="color: red;">Content not loaded.</p>
                     <button id="generateWords" onClick="OnLoad()">Load Pony Words</button>
                 </div>
                 <div id="generator" class="content-box">
+                    <h4>Generate</h4>
                     <button id="generateWords" onClick="OnGenerate()">Generate Pony Words</button>
+                    <button id="clearWords" onClick="OnClear()">Clear Pony Words</button>
                 </div>
             </div>
             <div class="twelve columns add-bottom">
